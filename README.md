@@ -13,7 +13,7 @@ A fork has been necessary since I was unable to install with Stack and has not b
 Certainly [d3.js](https://github.com/mbostock/d3) has moved on since then and this library may no longer be accurate.
 My goal (despite **very limited** knowledge of Haskell) is to pick up the baton and writen a working library.
 
-In Clojure such a interoperating library [Strokes](https://github.com/dribnet/strokes) has already been achieve and looks well-maintained.  One may look at the nice [discussion](https://news.ycombinator.com/item?id=11210177) there.
+In Clojure such a interoperating library [Strokes](https://github.com/dribnet/strokes) has already been achieve and looks well-maintained.  One may look at the nice [discussion](https://news.ycombinator.com/item?id=11210177) there.  Since Clojure is an extension of Lisp, I feel obligated to cite [SICP](https://mitpress.mit.edu/sicp/full-text/book/book.html) and extol it's tree based approach to programming.
 
 [EDSL](https://wiki.haskell.org/Embedded_domain_specific_language) stands for **E** mbedded **D** omain **S** pecific **L** anguage - in this case we are embedding d3.js into Haskell
 
