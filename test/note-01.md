@@ -6,9 +6,10 @@ The source code was confusing.  What is the minimum I need to put together a nic
 
 I found:
 
+```haskell
     writeToHtml :: (Reifiable a) => FilePath -> a -> IO ()
     writeToHtml path a = T.writeFile path $ T.concat ["<html> <head><body> <div id='body'></div> <script src='",d3jsUrl,"' charset='utf-8'></script> <script charset='utf-8'>\n",reify a,"\n</script> </body> </html>"]
-    
+```
     
     d3jsUrl = "./d3.js"
     -- d3jsUrl = "http://d3js.org/d3.v3.min.js"
