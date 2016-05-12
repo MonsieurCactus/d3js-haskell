@@ -113,7 +113,7 @@ I had to look up in a dictionary what Reify means:
 
 and the factoid
 
-> Did You Know?
+> ### Did You Know?
 > Reify is a word that attempts to provide a bridge between what is abstract and what is real. Fittingly, it derives from a word that is an ancestor to "real" - the Latin noun res, meaning "thing." Both "reify" and the related noun "reification" first appeared in English in the mid-19th century, though "reification" is a few years older and some dictionaries consider "reify" to be a back-formation of the noun. In general use, the words refer to the act of considering or presenting an abstract idea in real or material terms, or of judging something by a concrete example.
 
 So there you have it.  `Reify` acts on `Reifiable` types, which a different rule or each type.  `Data2D, Numfunc r, JSParam`, etc.
