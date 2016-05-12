@@ -9,7 +9,9 @@ I found:
 ```haskell
     writeToHtml :: (Reifiable a) => FilePath -> a -> IO ()
     writeToHtml path a = T.writeFile path $ T.concat 
-    ["<html> <head><body> <div id='body'></div> <script src='",d3jsUrl,"' charset='utf-8'></script> <script charset='utf-8'>\n",
+    ["<html> <head><body> <div id='body'></div> <script src='",
+    d3jsUrl,
+    "' charset='utf-8'></script> <script charset='utf-8'>\n",
     reify a,
     "\n</script> </body> </html>"]
     
@@ -24,6 +26,7 @@ The function `reify` seems to turn Haskell d3js objects into d3.js javascript  c
 
 How to draw a chart?
 
+``` haskell
     test1 = do
     	ps <- rand2D 100
     	writeToHtml "test1.html" (graph1 ps)
@@ -35,9 +38,11 @@ How to draw a chart?
     	elem <- box "#div1" dim
     	scatter (mkScatter (Data2D ps)) elem
     	addFrame (Size 300 300) (Size 250 250) elem 
+```
 
 Then the chart becomes a combination of the pure haskell objects 
 
+``` haskell
     addFrame :: Sel2 a => Size -> Size -> Var' a -> St ()
     addFrame (Size w h) (Size w2 h2) box = do
     	let dx = (w-w2)/2
@@ -55,9 +60,11 @@ Then the chart becomes a combination of the pure haskell objects
     		>>> fill' "none"
     		>>> attrt "stroke" "black"
     		>>> attrd "stroke-width" 1
+```
 
 Addframe seem really complicated.  Next: 
 
+``` haskell
     data Scatter = Scatter (Range Coord1) (Range Coord1) Ticks Ticks Data2D deriving (Show)
     
     autoTick :: Range Coord1 -> Range Scalar -> Ticks
@@ -92,6 +99,7 @@ Addframe seem really complicated.  Next:
     		(Val elem :: Chain () Selection)
     		>>> addCircles v
     	return cs
+```
 
 This got rather complicated.  At least we have all the parts.  Maybe I would like to try an even simpler example.
 This was supposed to be question on StackOverflow -- I don't have much of a question except what is this?????
