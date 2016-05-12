@@ -15,7 +15,7 @@ I found:
     
     d3jsUrl = "./d3.js"
     -- d3jsUrl = "http://d3js.org/d3.v3.min.js"
-    ```
+```
 
 The function `reify` seems to turn Haskell d3js objects into d3.js javascript  code.  It's debatable which is more real,
 
